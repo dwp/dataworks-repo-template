@@ -32,7 +32,9 @@ git-hooks: ## Set up hooks in .git/hooks
 
 .PHONY: initial-commit
 initial-commit: ## Rename template files
-	./initial-commit.sh
+	git checkout -b initial-commit
+	git submodule add https://github.com/dwp/githooks .githooks
+	make git-hooks
 
 .PHONY: terraform-init
 terraform-init: ## Run `terraform init` from repo root
