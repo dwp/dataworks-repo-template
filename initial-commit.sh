@@ -9,5 +9,5 @@ make git-hooks
 rm initial-commit.sh
 
 git add --all
-git commit -m "Renamed pipeline to fit repository"
+git commit -m "Initial commit, adding githooks submodule"
 git push --quiet --set-upstream origin initial-commit
